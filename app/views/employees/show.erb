@@ -1,0 +1,11 @@
+<img src="<%= @employee.img_url %>" alt="<%=  "#{@employee.first_name} #{@employee.last_name}" %>"height="30%" width="30%">
+<h1><%= "#{@employee.first_name} #{@employee.last_name}" %>, <%= @employee.title %></h1>
+<% unless @employee.alias == "none" %>
+Better know as: <%=@employee.alias %>
+<% end %>
+<br>
+Location: <%= @employee.office %> office
+<br>
+Dog: <%= link_to @employee.dog.name, @employee.dog %><br>
+Joined the Team on: <%= @employee.created_at %>
+<%= button_to "Back to Work", employees_path, method: :get %>

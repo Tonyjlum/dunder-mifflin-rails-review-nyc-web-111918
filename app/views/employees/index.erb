@@ -1,0 +1,5 @@
+<h1>The Dunder Mifflin family</h1>
+
+<% @employees.each do |e| %>
+  <h3><%= link_to "#{e.first_name} #{e.last_name}", e %></h3>
+<% end %>

@@ -1,0 +1,9 @@
+<h1><%= @dog.name %></h1>
+<p><%= @dog.breed %></p>
+<p><%= @dog.age %></p>
+
+<%= @dog.employees.count == 1 ? "My only friend:" : "The ones that feed me:" %><br>
+<% @dog.employees.each do |e|%>
+  <%= link_to "#{e.first_name} #{e.last_name}", e %><br>
+<% end %>
+<%= button_to "Back to Dogs", dogs_path, method: :get %>
